@@ -48,7 +48,9 @@
         }
       }
     </style>
-  <script defer="defer" src="js/main.js"></script></head>
+    <script defer="defer" src="js/script.js"></script>
+    <script defer="defer" src="js/main.js"></script>
+  </head>
   <body class="app">
     <div id="loader">
       <div class="spinner"></div>
@@ -141,7 +143,7 @@
                   <div class="bgc-white bd bdrs-3 p-20 mB-20">
                     <h4 class="c-grey-900 mB-20">Colagas de trabalho</h4>
                     <p>A lista abaixo mostra primeiro os colegas mais perto de você. <code class="text-info">Em azul são os colegas que moram mais longe da empresa que você, e por isso você poderá sair mais tarde.</code></p>
-                    <table class="table">
+                    <table class="table" id="coworkers">
                       <thead class="table-dark">
                         <tr>
                           <th scope="col">Nome</th>
@@ -152,7 +154,7 @@
                       </thead>
                       <tbody>
                         <tr class="table-info">
-                          <td>Mark H.</td>
+                          <td class="coworker-item">Mark H.</td>
                           <td>Otto</td>
                           <td>3 km</td>
                           <td class="text-center" style="width: 15%;">
@@ -163,7 +165,7 @@
                           </td>
                         </tr>
                         <tr>
-                          <td>Jacob S.</td>
+                          <td class="coworker-item">Jacob S.</td>
                           <td>Thornton</td>
                           <td>4 km</td>
                           <td class="text-center" style="width: 15%;">
@@ -174,7 +176,7 @@
                           </td>
                         </tr>
                         <tr class="table-info">
-                          <td>Larry L.</td>
+                          <td class="coworker-item">Larry L.</td>
                           <td>the Bird</td>
                           <td>4,5 km</td>
                           <td class="text-center" style="width: 15%;">
@@ -185,7 +187,7 @@
                           </td>
                         </tr>
                         <tr>
-                          <td>Garrett D.</td>
+                          <td class="coworker-item">Garrett D.</td>
                           <td>the Bird</td>
                           <td>6 km</td>
                           <td class="text-center" style="width: 15%;">
@@ -196,7 +198,7 @@
                           </td>
                         </tr>
                         <tr>
-                          <td>Louise A.</td>
+                          <td class="coworker-item">Louise A.</td>
                           <td>the Bird</td>
                           <td>6,1 km</td>
                           <td class="text-center" style="width: 15%;">
@@ -207,7 +209,7 @@
                           </td>
                         </tr>
                         <tr class="table-info">
-                          <td>Ruby T.</td>
+                          <td class="coworker-item">Ruby T.</td>
                           <td>the Bird</td>
                           <td>6,7 km</td>
                           <td class="text-center" style="width: 15%;">
@@ -218,7 +220,7 @@
                           </td>
                         </tr>
                         <tr class="table-info">
-                          <td>Vicki A.</td>
+                          <td class="coworker-item">Vicki A.</td>
                           <td>the Bird</td>
                           <td>8 km</td>
                           <td class="text-center" style="width: 15%;">
@@ -229,7 +231,7 @@
                           </td>
                         </tr>
                         <tr class="table-info">
-                          <td>Michael M.</td>
+                          <td class="coworker-item">Michael M.</td>
                           <td>the Bird</td>
                           <td>9,3 km</td>
                           <td class="text-center" style="width: 15%;">
@@ -240,7 +242,7 @@
                           </td>
                         </tr>
                         <tr>
-                          <td>Paul D.</td>
+                          <td class="coworker-item">Paul D.</td>
                           <td>the Bird</td>
                           <td>11 km</td>
                           <td class="text-center" style="width: 15%;">
@@ -251,7 +253,7 @@
                           </td>
                         </tr>
                         <tr>
-                          <td>Nancy L.</td>
+                          <td class="coworker-item">Nancy L.</td>
                           <td>the Bird</td>
                           <td>12 km</td>
                           <td class="text-center" style="width: 15%;">
