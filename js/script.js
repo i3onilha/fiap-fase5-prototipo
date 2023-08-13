@@ -17,7 +17,10 @@ function storageCoWorkers() {
   const checkedWorkers = []
   coWorkers.forEach(function(item) {
     if (isRowChecked(item)) {
-      checkedWorkers.push(item.innerText)
+      checkedWorkers.push({
+        name: item.innerText,
+        address: item.getAttribute("data-address")
+      })
     }
   })
   const dataStorage = {
