@@ -42,11 +42,20 @@ function checkCoWorkers() {
   storageCoWorkers()
 }
 
+function goToMap() {
+  const totalChecked = getCheckedCheckboxesAmount()
+  if (totalChecked <= 0) {
+    alert('Por favor selecione os colegas de trabalho antes de continuar.')
+    return
+  }
+  window.location.href = "mapa.html"
+}
+
 document.addEventListener("DOMContentLoaded", function() {
   const checkboxes = document.querySelectorAll('input[type="checkbox"]')
   checkboxes.forEach(function(checkbox) {
-    checkbox.addEventListener('change', function() {
-      checkCoWorkers()
-    })
+    checkbox.addEventListener('change', checkCoWorkers)
   })
+  const goMapButton = document.getElementById('gomap')
+  goMapButton.addEventListener('click', goToMap)
 })
