@@ -1,10 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title></title>
+  <title>Rota para Schneider</title>
 </head>
 <body>
-  <h1>MAPA PAGE</h1>
+  <iframe
+    id="routes"
+    width="1200"
+    height="900"
+    frameborder="0" style="border:0"
+    allowfullscreen>
+  </iframe>
+  <script>
+    function getMayPoints() {
+      const workers = JSON.parse(localStorage.getItem('workers'));
+      if (!workers.data) return [];
+      const address = workers.data.map((worker) => {
+        return worker.address || '';
+      });
+      return address.join('|');
+    }
+    const me = 'R. Ernest Renan, 605 - Morumbi, São Paulo - SP';
+    const schneider = 'R. Arquiteto Olavo Redig de Campos, 105 - Chácara Santo Antônio (Zona Sul), São Paulo - SP';
+    const mapsUrl = 'https://www.google.com/maps/embed/v1/directions?key=AIzaSyDiwGdNfD4HzweUYZgb6ylTMW74mwiqabo';
+    const iframeSource = `${mapsUrl}&origin=${me}&destination=${schneider}&waypoints=${getMayPoints()}`;
+    document.getElementById("routes").src = iframeSource;
+  </script>
 </body>
 </html>
